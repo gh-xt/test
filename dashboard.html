@@ -1,0 +1,737 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Data Security Posture Management - Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Roboto:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/common.css" />
+    <link rel="stylesheet" href="styles/dashboard.css" />
+  </head>
+  <body>
+    <div class="dashboard-container">
+      <div class="layout-wrapper">
+        <!-- Sidebar Navigation -->
+        <nav class="sidebar">
+          <div class="sidebar-content">
+            <div class="sidebar-header">
+              <div class="logo">
+                <div class="logo-icon">DSPM</div>
+              </div>
+            </div>
+
+            <ul class="nav-menu">
+              <li class="nav-item active">
+                <a href="#" class="nav-link">
+                  <div class="nav-icon">
+                    <svg
+                      width="20"
+                      height="20"
+                      viewBox="0 0 20 20"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M8.33333 2.5L2.5 6.66667V17.5H7.5V12.5H12.5V17.5H17.5V6.66667L11.6667 2.5H8.33333Z"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </div>
+                  <span class="nav-text">Overview</span>
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <div class="nav-icon">
+                    <svg
+                      width="20"
+                      height="20"
+                      viewBox="0 0 20 20"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M2.5 5H17.5L16.25 15H3.75L2.5 5Z"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M2.5 5L1.25 2.5H0.625"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </div>
+                  <span class="nav-text">Reports</span>
+                  <div class="nav-arrow">
+                    <svg
+                      width="12"
+                      height="12"
+                      viewBox="0 0 12 12"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M4.5 3L7.5 6L4.5 9"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </div>
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <div class="nav-icon">
+                    <svg
+                      width="20"
+                      height="20"
+                      viewBox="0 0 20 20"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <circle
+                        cx="10"
+                        cy="10"
+                        r="7.5"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                      />
+                      <path
+                        d="M10 6.25V10L12.5 12.5"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </div>
+                  <span class="nav-text">Analytics</span>
+                  <div class="nav-arrow">
+                    <svg
+                      width="12"
+                      height="12"
+                      viewBox="0 0 12 12"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M4.5 3L7.5 6L4.5 9"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </div>
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <div class="nav-icon">
+                    <svg
+                      width="20"
+                      height="20"
+                      viewBox="0 0 20 20"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <ellipse
+                        cx="10"
+                        cy="5"
+                        rx="7.5"
+                        ry="2.5"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                      />
+                      <path
+                        d="M2.5 5V10C2.5 11.3807 5.91015 12.5 10 12.5C14.0899 12.5 17.5 11.3807 17.5 10V5"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                      />
+                      <path
+                        d="M2.5 10V15C2.5 16.3807 5.91015 17.5 10 17.5C14.0899 17.5 17.5 16.3807 17.5 15V10"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                      />
+                    </svg>
+                  </div>
+                  <span class="nav-text">Data Sources</span>
+                  <div class="nav-arrow">
+                    <svg
+                      width="12"
+                      height="12"
+                      viewBox="0 0 12 12"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M4.5 3L7.5 6L4.5 9"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </div>
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <div class="nav-icon">
+                    <svg
+                      width="20"
+                      height="20"
+                      viewBox="0 0 20 20"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <circle
+                        cx="10"
+                        cy="10"
+                        r="2.5"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                      />
+                      <path
+                        d="M16.25 10C16.25 10 13.75 15 10 15C6.25 15 3.75 10 3.75 10C3.75 10 6.25 5 10 5C13.75 5 16.25 10 16.25 10Z"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                      />
+                    </svg>
+                  </div>
+                  <span class="nav-text">Setting</span>
+                  <div class="nav-arrow">
+                    <svg
+                      width="12"
+                      height="12"
+                      viewBox="0 0 12 12"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M4.5 3L7.5 6L4.5 9"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </div>
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <div class="nav-icon">
+                    <svg
+                      width="20"
+                      height="20"
+                      viewBox="0 0 20 20"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <circle
+                        cx="10"
+                        cy="10"
+                        r="7.5"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                      />
+                      <path
+                        d="M10 7.5V10"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                      />
+                      <path
+                        d="M10 12.5H10.0083"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                      />
+                    </svg>
+                  </div>
+                  <span class="nav-text">Help</span>
+                  <div class="nav-arrow">
+                    <svg
+                      width="12"
+                      height="12"
+                      viewBox="0 0 12 12"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M4.5 3L7.5 6L4.5 9"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <!-- Main Content -->
+        <main class="main-content">
+          <!-- Header -->
+          <header class="dashboard-header">
+            <h1 class="dashboard-title">Dashboard</h1>
+            <div class="header-controls">
+              <!-- Search Bar -->
+              <div class="search-container">
+                <div class="search-input-wrapper">
+                  <input
+                    type="text"
+                    class="search-input"
+                    placeholder="Search"
+                  />
+                  <button class="search-button">
+                    <svg
+                      width="32"
+                      height="32"
+                      viewBox="0 0 32 32"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <rect width="32" height="32" rx="5" fill="#F1EDF6"></rect>
+                      <path
+                        d="M22.8082 21.1039L20.0823 18.378C19.9593 18.255 19.7925 18.1866 19.6175 18.1866H19.1719C19.9265 17.2215 20.3749 16.0075 20.3749 14.6869C20.3749 11.5455 17.8294 9 14.6879 9C11.5464 9 9.00098 11.5455 9.00098 14.6869C9.00098 17.8284 11.5464 20.3739 14.6879 20.3739C16.0085 20.3739 17.2224 19.9255 18.1876 19.1709V19.6165C18.1876 19.7915 18.2559 19.9583 18.379 20.0813L21.1049 22.8072C21.3619 23.0643 21.7775 23.0643 22.0317 22.8072L22.8055 22.0335C23.0625 21.7765 23.0625 21.3609 22.8082 21.1039ZM14.6879 18.1866C12.7549 18.1866 11.1883 16.6227 11.1883 14.6869C11.1883 12.7539 12.7522 11.1873 14.6879 11.1873C16.6209 11.1873 18.1876 12.7512 18.1876 14.6869C18.1876 16.62 16.6237 18.1866 14.6879 18.1866Z"
+                        fill="#774AA4"
+                      ></path>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+
+              <!-- User Profile -->
+              <div class="user-profile-container">
+                <div class="user-profile-wrapper">
+                  <div class="user-avatar">
+                    <svg
+                      width="181"
+                      height="32"
+                      viewBox="0 0 181 32"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M174.534 20.8143L169.193 15.6809C168.936 15.4333 168.936 15.032 169.193 14.7844L169.816 14.1857C170.073 13.9385 170.49 13.938 170.748 14.1846L175 18.2529L179.252 14.1846C179.51 13.938 179.927 13.9385 180.184 14.1857L180.807 14.7844C181.064 15.032 181.064 15.4334 180.807 15.6809L175.466 20.8143C175.209 21.0619 174.791 21.0619 174.534 20.8143Z"
+                        fill="#774AA4"
+                      ></path>
+                      <text
+                        fill="#37234B"
+                        xml:space="preserve"
+                        class="user-name-text"
+                        font-family="Open Sans"
+                        font-size="14"
+                        font-weight="600"
+                        letter-spacing="0em"
+                      >
+                        <tspan x="42" y="20.9941">Xuan Tung</tspan>
+                      </text>
+                      <rect width="32" height="32" rx="3" fill="#774AA4"></rect>
+                    </svg>
+                  </div>
+                  <button class="logout-button" onclick="logout()">
+                    Logout
+                  </button>
+                </div>
+              </div>
+            </div>
+          </header>
+
+          <!-- Charts Section -->
+          <section class="charts-section">
+            <div class="chart-container">
+              <!-- Performance Table -->
+              <div class="performance-chart">
+                <div class="chart-table-container">
+                  <div class="chart-table-header">
+                    <h3 class="chart-table-title">Performance Metrics</h3>
+                    <div class="chart-table-period">Last 30 Days</div>
+                  </div>
+                  <div class="chart-table-content">
+                    <table class="performance-table">
+                      <thead>
+                        <tr>
+                          <th>Metric</th>
+                          <th>Current</th>
+                          <th>Previous</th>
+                          <th>Change</th>
+                          <th>Status</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td class="metric-name">Security Score</td>
+                          <td class="metric-value">94.2%</td>
+                          <td class="metric-previous">91.8%</td>
+                          <td class="metric-change positive">+2.4%</td>
+                          <td>
+                            <span class="status-indicator excellent"
+                              >Excellent</span
+                            >
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="metric-name">Compliance Rate</td>
+                          <td class="metric-value">87.5%</td>
+                          <td class="metric-previous">89.2%</td>
+                          <td class="metric-change negative">-1.7%</td>
+                          <td>
+                            <span class="status-indicator good">Good</span>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="metric-name">Threat Detection</td>
+                          <td class="metric-value">99.1%</td>
+                          <td class="metric-previous">98.7%</td>
+                          <td class="metric-change positive">+0.4%</td>
+                          <td>
+                            <span class="status-indicator excellent"
+                              >Excellent</span
+                            >
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="metric-name">Response Time</td>
+                          <td class="metric-value">2.3s</td>
+                          <td class="metric-previous">2.8s</td>
+                          <td class="metric-change positive">-0.5s</td>
+                          <td>
+                            <span class="status-indicator good">Good</span>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="metric-name">Data Coverage</td>
+                          <td class="metric-value">96.8%</td>
+                          <td class="metric-previous">95.1%</td>
+                          <td class="metric-change positive">+1.7%</td>
+                          <td>
+                            <span class="status-indicator excellent"
+                              >Excellent</span
+                            >
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="metric-name">False Positives</td>
+                          <td class="metric-value">3.2%</td>
+                          <td class="metric-previous">4.1%</td>
+                          <td class="metric-change positive">-0.9%</td>
+                          <td>
+                            <span class="status-indicator good">Good</span>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Client Response Table -->
+              <div class="client-response-chart">
+                <div class="chart-table-container">
+                  <div class="chart-table-header">
+                    <h3 class="chart-table-title">Client Response Analytics</h3>
+                    <div class="chart-table-period">Real-time</div>
+                  </div>
+                  <div class="chart-table-content">
+                    <table class="client-response-table">
+                      <thead>
+                        <tr>
+                          <th>Client</th>
+                          <th>Region</th>
+                          <th>Avg Response</th>
+                          <th>Success Rate</th>
+                          <th>Last Check</th>
+                          <th>Status</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td class="client-name">
+                            <div class="client-info">
+                              <div class="client-avatar">AC</div>
+                              <span>Acme Corp</span>
+                            </div>
+                          </td>
+                          <td class="client-region">US-East</td>
+                          <td class="response-time">1.2s</td>
+                          <td class="success-rate">99.8%</td>
+                          <td class="last-check">2 min ago</td>
+                          <td>
+                            <span class="status-indicator online">Online</span>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="client-name">
+                            <div class="client-info">
+                              <div class="client-avatar">GT</div>
+                              <span>Global Tech</span>
+                            </div>
+                          </td>
+                          <td class="client-region">EU-West</td>
+                          <td class="response-time">0.9s</td>
+                          <td class="success-rate">99.5%</td>
+                          <td class="last-check">1 min ago</td>
+                          <td>
+                            <span class="status-indicator online">Online</span>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="client-name">
+                            <div class="client-info">
+                              <div class="client-avatar">MS</div>
+                              <span>MegaSoft Inc</span>
+                            </div>
+                          </td>
+                          <td class="client-region">Asia-Pacific</td>
+                          <td class="response-time">2.1s</td>
+                          <td class="success-rate">97.2%</td>
+                          <td class="last-check">5 min ago</td>
+                          <td>
+                            <span class="status-indicator warning">Slow</span>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="client-name">
+                            <div class="client-info">
+                              <div class="client-avatar">DS</div>
+                              <span>DataSafe Ltd</span>
+                            </div>
+                          </td>
+                          <td class="client-region">US-West</td>
+                          <td class="response-time">1.5s</td>
+                          <td class="success-rate">98.9%</td>
+                          <td class="last-check">3 min ago</td>
+                          <td>
+                            <span class="status-indicator online">Online</span>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="client-name">
+                            <div class="client-info">
+                              <div class="client-avatar">CS</div>
+                              <span>CloudSecure</span>
+                            </div>
+                          </td>
+                          <td class="client-region">EU-Central</td>
+                          <td class="response-time">3.2s</td>
+                          <td class="success-rate">95.1%</td>
+                          <td class="last-check">8 min ago</td>
+                          <td>
+                            <span class="status-indicator offline"
+                              >Offline</span
+                            >
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="client-name">
+                            <div class="client-info">
+                              <div class="client-avatar">NB</div>
+                              <span>NextBank</span>
+                            </div>
+                          </td>
+                          <td class="client-region">US-Central</td>
+                          <td class="response-time">1.8s</td>
+                          <td class="success-rate">99.1%</td>
+                          <td class="last-check">4 min ago</td>
+                          <td>
+                            <span class="status-indicator online">Online</span>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Search and Filter Section -->
+          <section class="search-filter-section">
+            <div class="material-search-bar">
+              <div class="search-bar-content">
+                <div class="search-icon-left">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M3 18V16H21V18H3ZM3 13V11H21V13H3ZM3 8V6H21V8H3Z"
+                      fill="#49454F"
+                    ></path>
+                  </svg>
+                </div>
+                <input
+                  type="text"
+                  class="material-search-input"
+                  placeholder="Search"
+                />
+                <div class="search-icon-right">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M19.6 21L13.3 14.7C12.8 15.1 12.225 15.4167 11.575 15.65C10.925 15.8833 10.2333 16 9.5 16C7.68333 16 6.14583 15.3708 4.8875 14.1125C3.62917 12.8542 3 11.3167 3 9.5C3 7.68333 3.62917 6.14583 4.8875 4.8875C6.14583 3.62917 7.68333 3 9.5 3C11.3167 3 12.8542 3.62917 14.1125 4.8875C15.3708 6.14583 16 7.68333 16 9.5C16 10.2333 15.8833 10.925 15.65 11.575C15.4167 12.225 15.1 12.8 14.7 13.3L21 19.6L19.6 21ZM9.5 14C10.75 14 11.8125 13.5625 12.6875 12.6875C13.5625 11.8125 14 10.75 14 9.5C14 8.25 13.5625 7.1875 12.6875 6.3125C11.8125 5.4375 10.75 5 9.5 5C8.25 5 7.1875 5.4375 6.3125 6.3125C5.4375 7.1875 5 8.25 5 9.5C5 10.75 5.4375 11.8125 6.3125 12.6875C7.1875 13.5625 8.25 14 9.5 14Z"
+                      fill="#49454F"
+                    ></path>
+                  </svg>
+                </div>
+              </div>
+            </div>
+
+            <div class="filter-controls">
+              <div class="records-count">1907 records found</div>
+            </div>
+          </section>
+
+          <!-- Data Table Section -->
+          <section class="data-table-section">
+            <div class="table-container">
+              <div class="table-header">
+                <h2 class="table-title">Recent Activity</h2>
+                <div class="table-controls">
+                  <div class="filter-dropdown">
+                    <svg
+                      width="61"
+                      height="25"
+                      viewBox="0 0 61 25"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <rect
+                        x="1.4082"
+                        y="0.5"
+                        width="58.7454"
+                        height="24"
+                        rx="2.5"
+                        fill="white"
+                        stroke="#E4DBED"
+                      ></rect>
+                      <text
+                        fill="#B1A8B9"
+                        xml:space="preserve"
+                        class="filter-text"
+                        font-family="Open Sans"
+                        font-size="12"
+                        font-weight="600"
+                        letter-spacing="0em"
+                      >
+                        <tspan x="14.8027" y="16.5664">4</tspan>
+                      </text>
+                      <path
+                        d="M39.2724 16.8409L33.0889 12.4408C32.7907 12.2286 32.7907 11.8845 33.0889 11.6723L33.8101 11.1592C34.1078 10.9473 34.5903 10.9469 34.8888 11.1582L39.8124 14.6454L44.736 11.1582C45.0344 10.9469 45.5169 10.9473 45.8146 11.1592L46.5358 11.6723C46.8341 11.8846 46.8341 12.2286 46.5358 12.4408L40.3524 16.8409C40.0541 17.053 39.5706 17.053 39.2724 16.8409Z"
+                        fill="#B1A8B9"
+                      ></path>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+
+              <div class="table-scroll-wrapper">
+                <table class="activity-table">
+                  <thead>
+                    <tr class="table-header-row">
+                      <th class="table-header-cell">User</th>
+                      <th class="table-header-cell">Provider</th>
+                      <th class="table-header-cell">Identify</th>
+                      <th class="table-header-cell">Service</th>
+                      <th class="table-header-cell">Check</th>
+                      <th class="table-header-cell">Severity</th>
+                      <th class="table-header-cell">Status</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="table-row">
+                      <td class="table-cell">Esther Howard</td>
+                      <td class="table-cell">AWS</td>
+                      <td class="table-cell">22521619</td>
+                      <td class="table-cell">Search</td>
+                      <td class="table-cell">Check if IAM ...</td>
+                      <td class="table-cell">Medium</td>
+                      <td class="table-cell">
+                        <span class="status-badge status-successful"
+                          >Successful</span
+                        >
+                      </td>
+                    </tr>
+                    <tr class="table-row">
+                      <td class="table-cell">Cameron Williamson</td>
+                      <td class="table-cell">AWS</td>
+                      <td class="table-cell">22521111</td>
+                      <td class="table-cell">Application</td>
+                      <td class="table-cell">Check if IAM ...</td>
+                      <td class="table-cell">High</td>
+                      <td class="table-cell">
+                        <span class="status-badge status-pending">Pending</span>
+                      </td>
+                    </tr>
+                    <tr class="table-row">
+                      <td class="table-cell">Brooklyn Simmons</td>
+                      <td class="table-cell">AWS</td>
+                      <td class="table-cell">11241543</td>
+                      <td class="table-cell">Delete</td>
+                      <td class="table-cell">Check if IAM ...</td>
+                      <td class="table-cell">Critical</td>
+                      <td class="table-cell">
+                        <span class="status-badge status-successful"
+                          >Successful</span
+                        >
+                      </td>
+                    </tr>
+                    <tr class="table-row">
+                      <td class="table-cell">Darlene Robertson</td>
+                      <td class="table-cell">AWS</td>
+                      <td class="table-cell">57457456</td>
+                      <td class="table-cell">Move</td>
+                      <td class="table-cell">Check if IAM ...</td>
+                      <td class="table-cell">Low</td>
+                      <td class="table-cell">
+                        <span class="status-badge status-successful"
+                          >Successful</span
+                        >
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </section>
+        </main>
+      </div>
+    </div>
+
+    <script src="js/dashboard.js"></script>
+    <script src="js/auth.js"></script>
+  </body>
+</html>

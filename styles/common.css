@@ -1,0 +1,90 @@
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  background-color: #fcfaff;
+  color: #37234b;
+  line-height: 1.6;
+}
+
+/* Typography */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+/* Button Base Styles */
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+/* Input Base Styles */
+input {
+  border: none;
+  outline: none;
+  font-family: inherit;
+}
+
+/* Link Styles */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Utility Classes */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Responsive Image */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Focus Styles */
+button:focus,
+input:focus,
+a:focus {
+  outline: 2px solid #774aa4;
+  outline-offset: 2px;
+}
+
+/* Color Variables */
+:root {
+  --primary-color: #774aa4;
+  --secondary-color: #afa9b6;
+  --text-primary: #37234b;
+  --text-secondary: #7b7b7b;
+  --text-muted: #b1a8b9;
+  --background-primary: #fcfaff;
+  --background-secondary: #fff;
+  --border-color: #e4dbed;
+  --success-color: #34af3e;
+  --success-bg: #e8f6ea;
+  --warning-color: #e6b800;
+  --warning-bg: #fff5cc;
+  --surface-color: #f1edf6;
+  --material-surface: #ece6f0;
+}
